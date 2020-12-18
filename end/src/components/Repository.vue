@@ -9,26 +9,28 @@
       </div>
     </section>
     <div class="container">
-      <table class="table is-bordered is-striped is-hoverable is-fullwidth">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>URL</th>
-            <th>Language</th>
-            <th>Login</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="repo in repos" v-bind:key="repo.id">
-            <td>{{ repo.id }}</td>
-            <td>{{ repo.name }}</td>
-            <td>{{ repo.html_url }}</td>
-            <td>{{ repo.language }}</td>
-            <td>{{ repo.owner.login }}</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-container">
+        <table class="table is-bordered is-striped is-hoverable is-fullwidth">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>URL</th>
+              <th>Language</th>
+              <th>Login</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="repo in repos" v-bind:key="repo.id">
+              <td>{{ repo.id }}</td>
+              <td>{{ repo.name }}</td>
+              <td>{{ repo.html_url }}</td>
+              <td>{{ repo.language }}</td>
+              <td>{{ repo.owner.login }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </template>
@@ -60,4 +62,5 @@ body {
 .table th {
   padding: 20px !important;
 }
+
 </style>
